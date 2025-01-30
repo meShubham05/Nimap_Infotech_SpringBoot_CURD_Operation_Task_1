@@ -30,12 +30,14 @@ public class CategoryController {
     }
 
     @PostMapping
-    public Category createCategory(@RequestBody Category category) {
+    public Category createCategory(@RequestBody Category category)
+    {
         return categoryService.createCategory(category);
     }
 
     @GetMapping("/{id}")
-    public Optional<Category> getCategoryById(@PathVariable Long id) {
+    public Optional<Category> getCategoryById(@PathVariable Long id)
+    {
         return categoryService.getCategoryById(id);
     }
 
@@ -45,7 +47,8 @@ public class CategoryController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCategory(@PathVariable Long id) {
+    public void deleteCategory(@PathVariable Long id)
+    {
         categoryService.deleteCategory(id);
     }
 }

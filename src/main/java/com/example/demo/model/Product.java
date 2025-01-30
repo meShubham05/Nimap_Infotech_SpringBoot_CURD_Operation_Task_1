@@ -48,4 +48,6 @@ public class Product {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    // have used getter and setter instead of @Data annotation or @Getter & @Setter
 }

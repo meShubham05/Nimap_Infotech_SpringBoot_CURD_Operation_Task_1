@@ -15,7 +15,7 @@ public class Category {
     private String name;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Product> products;
+    private List<Product> products;  // here have used OneToMany relationship because one category contains many products
 
     public Long getId() {
         return id;
@@ -32,4 +32,6 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+    // have used getter and setter instead of @Data annotation or @Getter & @Setter
 }
